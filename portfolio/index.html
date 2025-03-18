@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daksh Jeena - Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111111;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+        ::selection {
+            background: #3b82f6;
+            color: white;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in forwards;
+        }
+        .slide-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.95);
+            animation: scaleIn 0.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes scaleIn {
+            from { 
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        .code-bg {
+            background: linear-gradient(45deg, #1a1a1a, #0d0d0d);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 h-screen w-20 bg-black flex flex-col items-center py-8 space-y-8">
+        <div class="text-4xl font-bold text-white">D</div>
+        <div class="flex flex-col space-y-6">
+            <a href="#about" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-terminal"></i>
+            </a>
+            <a href="#skills" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-code"></i>
+            </a>
+            <a href="#projects" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-laptop-code"></i>
+            </a>
+            <a href="#contact" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <div class="mt-auto">
+            <a href="https://www.linkedin.com/in/daksh-jeena-747856231" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="ml-20 bg-[#111111]">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center px-12 relative code-bg">
+            <div class="max-w-4xl">
+                <h1 class="text-7xl font-bold mb-4 fade-in">
+                    Hi,<br>
+                    I'm <span class="text-blue-500">Daksh</span>,<br>
+                    Software Developer
+                </h1>
+                <p class="text-gray-400 text-xl mb-8 slide-up">
+                    Full Stack Developer / Technical Product Specialist
+                </p>
+                <div class="space-x-4">
+                    <a href="#projects" class="inline-block bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition-colors scale-in">
+                        View Projects
+                    </a>
+                    <a href="#contact" class="inline-block border border-blue-500 text-blue-500 px-8 py-3 rounded-full hover:bg-blue-500 hover:text-white transition-all scale-in">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="absolute top-8 right-8 flex space-x-6 text-gray-400">
+                <a href="mailto:daksh.jeena@gmail.com" class="hover:text-white transition-colors">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+918376818630" class="hover:text-white transition-colors">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="min-h-screen px-12 py-24">
+            <h2 class="text-4xl font-bold mb-12">Technical Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black/50 rounded-xl p-8 scale-in hover-scale backdrop-blur-sm">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-500">Languages & Frameworks</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-code text-blue-500"></i>
+                            <span>C, C++, Python, Core Java</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-database text-blue-500"></i>
+                            <span>SQL, Database Management</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fab fa-html5 text-blue-500"></i>
+                            <span>HTML, CSS, JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-black/50 rounded-xl p-8 scale-in hover-scale backdrop-blur-sm">
+                    <h3 class="text-2xl font-semibold mb-6 text-blue-500">Development Tools</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-tools text-blue-500"></i>
+                            <span>Git, VS Code, Docker</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-server text-blue-500"></i>
+                            <span>AWS, Azure, Cloud Services</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-cogs text-blue-500"></i>
+                            <span>CI/CD, Agile Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen px-12 py-24">
+            <h2 class="text-4xl font-bold mb-12">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black/50 rounded-xl p-8 slide-up hover-scale backdrop-blur-sm">
+                    <h3 class="text-2xl font-semibold text-blue-500">E-Commerce Platform</h3>
+                    <p class="text-gray-400 mt-4">A full-stack e-commerce solution with modern features:</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-500"></i>
+                            <span>React.js frontend with Redux state management</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-500"></i>
+                            <span>Node.js backend with Express</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-500"></i>
+                            <span>MongoDB database integration</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-black/50 rounded-xl p-8 slide-up hover-scale backdrop-blur-sm">
+                    <h3 class="text-2xl font-semibold text-blue-500">IVR System Design</h3>
+                    <p class="text-gray-400 mt-4">Advanced IVR system with:</p>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-500"></i>
+                            <span>Automated call routing algorithms</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-500"></i>
+                            <span>Natural Language Processing integration</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-blue-500"></i>
+                            <span>Real-time analytics dashboard</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen px-12 py-24 flex items-center">
+            <div class="w-full max-w-2xl">
+                <h2 class="text-4xl font-bold mb-8">Let's Connect</h2>
+                <div class="bg-black/50 rounded-xl p-8 backdrop-blur-sm">
+                    <div class="space-y-6">
+                        <a href="mailto:daksh.jeena@gmail.com" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-envelope text-blue-500 mr-3 text-xl"></i>
+                            daksh.jeena@gmail.com
+                        </a>
+                        <a href="tel:+918376818630" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <i class="fas fa-phone text-blue-500 mr-3 text-xl"></i>
+                            +91 8376818630
+                        </a>
+                        <a href="https://www.linkedin.com/in/daksh-jeena-747856231" target="_blank" class="flex items-center text-gray-300 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin text-blue-500 mr-3 text-xl"></i>
+                            LinkedIn Profile
+                        </a>
+                        <div class="flex items-center text-gray-300">
+                            <i class="fas fa-map-marker-alt text-blue-500 mr-3 text-xl"></i>
+                            Delhi, India
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
